@@ -158,6 +158,8 @@ public class App {
                 // Ejemplo:
                 // System.out.println("Listado original:");
                 // controller.printLeagues(leagues);
+                System.out.println("lista original");
+                
 
                 // TODO: Crear una copia del arreglo y aplicar el metodo de ordenamiento de su
                 // fila

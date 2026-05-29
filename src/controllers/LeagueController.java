@@ -15,6 +15,20 @@ public class LeagueController {
      */
     public League[] sortSelectionAsc(League[] leagues) {
         // TODO: Implementar (solo si su fila es A)
+        int n = leagues.length;
+        for (int i = 0; i< n -1 ; i++){
+            int indiceMinimo = i;
+            for (int j= i +1;j<n; j++ ){
+                if(leagues[j].getTotalActiveGoals()< leagues[indiceMinimo].getTotalActiveGoals()){
+                    indiceMinimo = j;
+
+                }
+            }
+            int temporal= leagues [indiceMinimo];
+            leagues[indiceMinimo]= leagues[i];
+            leagues[i]=temporal;
+        }
+
         throw new UnsupportedOperationException("Metodo sortSelectionAsc no implementado");
     }
 
@@ -49,6 +63,7 @@ public class LeagueController {
     public League binarySearchByTotalActiveGoals(League[] leagues, int totalActiveGoals) {
         // TODO: Implementar
         throw new UnsupportedOperationException("Metodo binarySearchByTotalActiveGoals no implementado");
+
     }
 
     /**
